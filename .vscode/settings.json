@@ -5,7 +5,19 @@
   "editor.formatOnPaste": true,
   "editor.codeActionsOnSave": {
     "source.addMissingImports": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifier": "non-relative",
+  "eslint.validate": [
+    "html",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.linkedEditing": true,
+  "html.autoClosingTags": true,
+  "javascript.autoClosingTags": true,
+  "typescript.autoClosingTags": true
 }
