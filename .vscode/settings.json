@@ -23,11 +23,13 @@
   "cSpell.ignorePaths": [
     "package-lock.json",
     "node_modules",
-    "vscode-extension",
     ".git/{info,lfs,logs,refs,objects}/**",
     ".git/{index,*refs,*HEAD}",
     ".vscode",
-    ".vscode-insiders",
-    ".devcontainer"
-  ]
+    ".vscode-insiders"
+  ],
+  "cSpell.ignoreWords": [
+    // スペルチェッカー無視するワード
+  ],
+  "extensions.ignoreRecommendations": false
 }
