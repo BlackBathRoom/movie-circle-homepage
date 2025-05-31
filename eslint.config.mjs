@@ -46,20 +46,6 @@ const eslintConfig = [
       '@next/next/no-img-element': 'off',
     },
   },
-  {
-    ignores: [
-      'node_modules',
-      'dist',
-      'build',
-      'coverage',
-      '.next',
-      'out',
-      'public/static',
-      'public/assets',
-      'public/favicon.ico',
-      'public/robots.txt',
-    ],
-  },
   eslintConfigPrettier,
 ];
 

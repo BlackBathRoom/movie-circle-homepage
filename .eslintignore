@@ -9,4 +9,8 @@ public/
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+vite.config.ts
 next.config.ts
+src/env.d.ts
+*.cjs
+*.mjs
