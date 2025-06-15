@@ -32,7 +32,7 @@ export default function Home() {
         </div>
         <ImageMoc />
       </div>
-      <div className="flex w-full bg-slate-400">
+      <div className="flex w-full bg-slate-400 h-fit p-5">
         <span className="m-auto text-9xl">footer</span>
       </div>
     </div>
