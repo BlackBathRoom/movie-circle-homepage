@@ -30,8 +30,6 @@
     ".vscode",
     ".vscode-insiders"
   ],
-  "cSpell.ignoreWords": [
-    // スペルチェッカー無視するワード
-  ],
-  "extensions.ignoreRecommendations": false
+  "extensions.ignoreRecommendations": false,
+  "cSpell.words": ["modestbranding"]
 }
