@@ -33,11 +33,5 @@ if [ -e "$STORY_PATH" ]; then
   exit 1
 fi
 
-# 4. テンプレートから生成
-if [ ! -f "$TEMPLATE" ]; then
-  echo "テンプレートファイル $TEMPLATE が存在しません。処理を終了します。"
-  exit 1
-fi
-
 sed "s/__COMPONENT__/$COMPONENT/g" "$TEMPLATE" > "$STORY_PATH"
 echo "$STORY_PATH を作成しました。"
