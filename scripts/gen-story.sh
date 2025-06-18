@@ -22,7 +22,7 @@ if [ ! -f "$COMP_PATH" ]; then
 fi
 
 # 2. ディレクトリ名と同名のデフォルトエクスポートを確認
-if ! grep -Eq "export default (function|const|class) $COMPONENT|export default $COMPONENT;" "$COMP_PATH"; then
+if ! grep -Eq "export default (function|const|class|\\(.*\\) =>|\\(\\) =>) $COMPONENT|export default $COMPONENT;" "$COMP_PATH"; then
   echo "ディレクトリ名($COMPONENT)と同名のコンポーネントがデフォルトエクスポートされていません。処理を終了します。"
   exit 1
 fi
