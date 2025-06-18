@@ -11,7 +11,7 @@ SCRIPT_PATH=$(cd $(dirname "$0") && pwd)
 
 COMPONENT="$1"
 DIR="$SCRIPT_PATH/../src/components/$COMPONENT"
-TEMPLATE="$SCRIPT_PATH/template/index.tpl"
+TEMPLATE="$SCRIPT_PATH/template/index.tsx"
 
 mkdir -p "$DIR"
 

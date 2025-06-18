@@ -13,7 +13,7 @@ COMPONENT="$1"
 DIR="$SCRIPT_PATH/../src/components/$COMPONENT"
 COMP_PATH="$DIR/index.tsx"
 STORY_PATH="$DIR/$COMPONENT.stories.ts"
-TEMPLATE="$SCRIPT_PATH/template/StoryTemplate.tpl"
+TEMPLATE="$SCRIPT_PATH/template/StoryTemplate.stories.ts"
 
 # 1. index.tsxであることを確認
 if [ ! -f "$COMP_PATH" ]; then

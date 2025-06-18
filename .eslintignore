@@ -14,3 +14,4 @@ next.config.ts
 src/env.d.ts
 *.cjs
 *.mjs
+scripts/template/
