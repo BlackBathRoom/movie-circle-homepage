@@ -24,7 +24,7 @@
     "@cloudflare/next-on-pages": "^1.13.12",
     "@eslint/eslintrc": "^3",
     "@storybook/addon-a11y": "^9.0.11",
-    "@storybook/addon-docs": "^9.0.11",
+    "@storybook/addon-docs": "^9.0.12",
     "@storybook/addon-onboarding": "^9.0.12",
     "@storybook/addon-vitest": "^9.0.11",
     "@storybook/nextjs-vite": "^9.0.11",
