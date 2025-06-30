@@ -15,7 +15,7 @@ const getEnv = (key: string): string => {
   return value;
 };
 
-export const ENV_KEYS = {
+export const ENVIRONMENTS = {
   MICROCMS_API_KEY: () => getEnv('MICROCMS_API_KEY'),
   MICROCMS_SERVICE_DOMAIN: () => getEnv('MICROCMS_SERVICE_DOMAIN'),
 } as const;
