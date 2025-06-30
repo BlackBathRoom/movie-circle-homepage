@@ -21,7 +21,7 @@ type Images = {
   image: MicroCMSImage;
 } & MicroCMSListContent;
 
-type Member = {
+type Members = {
   name: string;
   description: string;
   role: string;
@@ -36,7 +36,7 @@ type Biographies = {
 type Endpoints = {
   movies: Movies;
   images: Images;
-  members: Member;
+  members: Members;
   biographies: Biographies;
 };
 
@@ -64,6 +64,6 @@ export type {
   GetListRequest,
   GetListResponse,
   Images,
-  Member,
+  Members,
   Movies,
 };
