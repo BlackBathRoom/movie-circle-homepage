@@ -1,7 +1,7 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import MoviePlayer from '@/components/MoviePlayer';
-import Works from '@/components/Works';
+import Slider from '@/components/Slider';
 import { client } from '@/lib/microcms';
 import type { NextPage } from 'next';
 
@@ -10,6 +10,11 @@ const Page: NextPage = async () => {
     endpoint: 'movies',
     queries: { fields: ['url', 'title', 'startAt'] },
   });
+  const images = await client.getList({
+    endpoint: 'images',
+    queries: { fields: ['image', 'title'] },
+  });
+
   return (
     <div className="m-0 p-0">
       {/* 動画セクション */}
@@ -22,7 +27,16 @@ const Page: NextPage = async () => {
         />
       </section>
       <Header />
-      <Works />
+      <section>
+        <Slider
+          images={images.contents.map((data) => ({
+            src: data.image.url,
+            alt: data.title,
+            width: data.image.width,
+            height: data.image.height,
+          }))}
+        />
+      </section>
       <Footer />
     </div>
   );
