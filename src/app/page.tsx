@@ -1,6 +1,6 @@
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
-
+import Works from '../components/Works/Works';
 const App = () => {
   return (
     <div className="m-0 p-0">
@@ -20,28 +20,8 @@ const App = () => {
           </div>
         </div>
       </section>
-
-      {/* ヘッダー */}
       <Header />
-
-      {/* 画像スライダー */}
-      <section
-        id="works"
-        className="mx-auto overflow-x-auto py-6 px-4 bg-gray-100"
-      >
-        <div className="inline-flex space-x-4 justify-center w-full min-w-fit">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <img
-              key={i}
-              src={`../img${i + 1}.svg`}
-              alt={`img${i + 1}`}
-              className="w-48 h-36 rounded shadow"
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* フッター */}
+      <Works />
       <Footer />
     </div>
   );
