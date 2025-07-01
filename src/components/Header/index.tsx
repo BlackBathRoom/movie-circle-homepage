@@ -21,10 +21,10 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#contact"
+              href="#goods"
               className="shadow-2xs hover:shadow-lg hover:underline"
             >
-              Contact
+              Goods
             </a>
           </li>
         </ul>
