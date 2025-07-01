@@ -1,24 +1,25 @@
-import Footer from '../components/Footer/Footer';
-import Header from '../components/Header/Header';
-import Works from '../components/Works/Works';
-const App = () => {
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+import MoviePlayer from '@/components/MoviePlayer';
+import Works from '@/components/Works';
+import { client } from '@/lib/microcms';
+import type { NextPage } from 'next';
+
+const Page: NextPage = async () => {
+  const video = await client.getList({
+    endpoint: 'movies',
+    queries: { fields: ['url', 'title', 'startAt'] },
+  });
   return (
     <div className="m-0 p-0">
       {/* 動画セクション */}
       <section className="relative w-full h-screen overflow-hidden">
-        <video
+        <MoviePlayer
+          href={video.contents[0].url}
+          embedVideoTitle={video.contents[0].title}
+          startAt={video.contents[0].startAt}
           className="absolute top-0 left-0 w-full h-full object-cover"
-          src="video.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
         />
-        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 text-white">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">動画</h1>
-          </div>
-        </div>
       </section>
       <Header />
       <Works />
@@ -27,4 +28,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Page;
