@@ -7,6 +7,8 @@
     "source.addMissingImports": "explicit",
     "source.fixAll.eslint": "explicit"
   },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "eslint.validate": [
@@ -28,8 +30,6 @@
     ".vscode",
     ".vscode-insiders"
   ],
-  "cSpell.ignoreWords": [
-    // スペルチェッカー無視するワード
-  ],
-  "extensions.ignoreRecommendations": false
+  "extensions.ignoreRecommendations": false,
+  "cSpell.words": ["MICROCMS", "modestbranding"]
 }

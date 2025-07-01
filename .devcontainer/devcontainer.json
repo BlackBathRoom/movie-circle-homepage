@@ -25,5 +25,5 @@
     }
   },
   "postAttachCommand": "sudo chown -R node:node /app ./node_modules && npm i",
-  "forwardPorts": [3000]
+  "forwardPorts": [3000, 6006]
 }

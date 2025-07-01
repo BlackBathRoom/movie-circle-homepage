@@ -1,5 +1,6 @@
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
+
 const App = () => {
   return (
     <div className="m-0 p-0">
