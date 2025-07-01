@@ -27,7 +27,7 @@ const Page: NextPage = async () => {
         />
       </section>
       <Header />
-      <section>
+      <div className="py-6 px-4 bg-gray-100">
         <Slider
           images={images.contents.map((data) => ({
             src: data.image.url,
@@ -36,7 +36,7 @@ const Page: NextPage = async () => {
             height: data.image.height,
           }))}
         />
-      </section>
+      </div>
       <Footer />
     </div>
   );
