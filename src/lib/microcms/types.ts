@@ -33,11 +33,18 @@ type Biographies = {
   dateAt: string;
 } & MicroCMSListContent;
 
+type Goods = {
+  name: string;
+  description: string;
+  image?: MicroCMSImage;
+} & MicroCMSListContent;
+
 type Endpoints = {
   movies: Movies;
   images: Images;
   members: Members;
   biographies: Biographies;
+  goods: Goods;
 };
 
 // MicroCMS Types
