@@ -1,4 +1,5 @@
 import { PAGES } from '@/constants';
+import Link from 'next/link';
 import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai';
 
 const Footer = () => {
@@ -28,13 +29,13 @@ const Footer = () => {
         </div>
         <div className="flex flex-col">
           {PAGES.map((page) => (
-            <a
+            <Link
               key={page.text}
               href={page.href}
               className="text-gray-300 hover:text-zinc-500 transition-colors"
             >
               {page.text}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
