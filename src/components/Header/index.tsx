@@ -3,26 +3,23 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <header className=" bg-white shadow-md">
-      <nav className="gap-4 px-5 py-3">
-        <ul className="flex space-x-24 text-gray-700 font-medium">
-          <div className="flex w-full justify-between">
-            <Link
-              href="/"
-              className="shadow-2xs hover:shadow-lg hover:underline"
-            >
-              <img src="MET.png" alt="logo" className="h-10 w-auto" />
-            </Link>
-          </div>
-          <div className="gap-4 flex items-center">
+    <header className="bg-white shadow-md">
+      <div className="flex w-full justify-between px-5 py-3">
+        <Link href="/" className="shadow-2xs hover:shadow-lg hover:underline">
+          <img src="MET.png" alt="logo" className="h-10 w-auto" />
+        </Link>
+        <nav className="w-full flex justify-end">
+          <ul className="flex text-gray-700 font-medium gap-4">
             {PAGES.map((page) => (
-              <Link key={page.text} href={page.href} className="">
-                {page.text}
-              </Link>
+              <li key={page.text}>
+                <Link href={page.href} className="">
+                  {page.text}
+                </Link>
+              </li>
             ))}
-          </div>
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };

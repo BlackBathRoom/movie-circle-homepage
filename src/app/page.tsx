@@ -1,4 +1,3 @@
-import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import MoviePlayer from '@/components/MoviePlayer';
 import Slider from '@/components/Slider';
@@ -37,7 +36,6 @@ const Page: NextPage = async () => {
           }))}
         />
       </div>
-      <Footer />
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai';
 
 const Footer = () => {
   return (
-    <footer className="bg-zinc-700 text-white flex flex-col items-center py-4 h-60 text-2xl px-5">
+    <footer className="bg-zinc-700 text-white flex flex-col items-center py-4 min-h-60 text-2xl px-5">
       <div className="flex w-full justify-between">
         <div className="flex flex-col gap-2">
           <span className="text-3xl">ProductionMET</span>
