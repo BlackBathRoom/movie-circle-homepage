@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="h-full w-full overflow-x-hidden">{children}</body>
+      <body className="h-full w-full overflow-x-hidden">
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
