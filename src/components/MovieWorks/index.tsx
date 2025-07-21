@@ -17,7 +17,7 @@ const MovieWorks: React.FC<Props> = ({ movie, className }) => {
         <div className="w-full h-full max-w-4xl aspect-video bg-gray-100 shadow-md overflow-hidden">
           <iframe
             src={movie.url}
-            title={movie.title || '動画'}
+            title={movie.title}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
             className="w-full h-full"
