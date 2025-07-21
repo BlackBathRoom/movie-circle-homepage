@@ -23,15 +23,15 @@ const PhotoWorks: React.FC<Props> = ({ videos }) => {
 
   return (
     <div className="py-6 px-4 flex flex-col items-center">
-      <div className="flex items-center justify-center space-x-4 md:space-x-10">
+      <div className="flex items-center justify-center space-x-10">
         <button
           onClick={handlePrev}
-          className="text-5xl sm:text-6xl md:text-8xl text-gray-400 hover:text-gray-600 transition-colors select-none"
+          className="text-8xl text-gray-200 hover:text-gray-600 transition-colors select-none"
         >
           ◀
         </button>
 
-        <div className="w-[90vw] sm:w-[500px] md:w-[650px] aspect-video bg-gray-100 shadow-md">
+        <div className="w-[650px] h-[500px] bg-gray-100 shadow-md　">
           <iframe
             src={`https://www.youtube.com/embed/${video.videoId}?autoplay=1&modestbranding=1`}
             title={video.title || `Video ${currentIndex + 1}`}
@@ -43,7 +43,7 @@ const PhotoWorks: React.FC<Props> = ({ videos }) => {
 
         <button
           onClick={handleNext}
-          className="text-5xl sm:text-6xl md:text-8xl text-gray-400 hover:text-gray-600 transition-colors select-none"
+          className="text-8xl text-gray-200 hover:text-gray-600 transition-colors select-none"
         >
           ▶
         </button>
