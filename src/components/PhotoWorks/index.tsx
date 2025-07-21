@@ -1,42 +1,56 @@
 'use client';
-import Image from 'next/image';
 import { useState } from 'react';
 
 type Props = {
-  images: {
-    src: string;
-    alt: string;
-    width?: number;
-    height?: number;
+  videos: {
+    videoId: string;
+    title?: string;
   }[];
 };
 
-const PhotoWorks: React.FC<Props> = ({ images }) => {
+const PhotoWorks: React.FC<Props> = ({ videos }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleClick = () => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % videos.length);
   };
 
-  const image = images[currentIndex];
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + videos.length) % videos.length);
+  };
+
+  const video = videos[currentIndex];
 
   return (
     <div className="py-6 px-4 flex flex-col items-center">
-      <div
-        onClick={handleClick}
-        className="cursor-pointer bg-gray-100 p-4 shadow-md"
-      >
-        <div className="relative w-[650px] h-[500px]">
-          <Image
-            src={image.src}
-            alt={image.alt}
-            fill
-            className="object-contain shadow-md"
+      <div className="flex items-center justify-center space-x-4 md:space-x-10">
+        <button
+          onClick={handlePrev}
+          className="text-5xl sm:text-6xl md:text-8xl text-gray-400 hover:text-gray-600 transition-colors select-none"
+        >
+          ◀
+        </button>
+
+        <div className="w-[90vw] sm:w-[500px] md:w-[650px] aspect-video bg-gray-100 shadow-md">
+          <iframe
+            src={`https://www.youtube.com/embed/${video.videoId}?autoplay=1&modestbranding=1`}
+            title={video.title || `Video ${currentIndex + 1}`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="w-full h-full rounded shadow-md"
           />
         </div>
+
+        <button
+          onClick={handleNext}
+          className="text-5xl sm:text-6xl md:text-8xl text-gray-400 hover:text-gray-600 transition-colors select-none"
+        >
+          ▶
+        </button>
       </div>
-      <p className="mt-2 text-gray-400">
-        {currentIndex + 1} / {images.length}
+
+      <p className="mt-4 text-gray-400">
+        {currentIndex + 1} / {videos.length}
       </p>
     </div>
   );
