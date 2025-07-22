@@ -15,19 +15,25 @@ const Page: NextPage<Props> = async ({ params }) => {
   });
 
   return (
-    <div className="px-3 py-2 flex flex-col items-center gap-5">
-      <div className="flex flex-col items-center">
-        <MoviePlayer
-          href={movie.url}
-          embedVideoTitle={movie.title}
-          startAt={movie.startAt}
-          className=""
-        />
-        <span className="text-2xl font-bold text-gray-800 mt-4">
-          {movie.title}
-        </span>
+    <div className="bg-gray-400 py-12 px-4">
+      <div className="min-h-screen px-3 py-2 flex flex-col items-center gap-5 ">
+        <div className="relative w-full flex flex-col items-center  px-5">
+          <MoviePlayer
+            href={movie.url}
+            embedVideoTitle={movie.title}
+            startAt={movie.startAt}
+            className=" w-3/5 max-w-[900px] aspect-video"
+          />
+        </div>
+        <div className="w-3/5 max-w-[900px] bg-gray-100 shadow-md gap-4 p-6 flex flex-col ">
+          <span className="block text-3xl font-bold text-gray-800 mb-4 mt-4 px-4">
+            {movie.title}
+          </span>
+          <span className="block p-6 text-lg text-gray-700 mb-4 mt-4 px-4">
+            {movie.description}
+          </span>
+        </div>
       </div>
-      <span className="text-lg text-gray-700">{movie.description}</span>
     </div>
   );
 };
