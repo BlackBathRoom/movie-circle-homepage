@@ -1,8 +1,8 @@
 'use client';
 
-import MoviePlayer from '@/components/MoviePlayer';
 import type { Movies } from '@/lib/microcms/types';
 import { cn } from '@/lib/utils';
+import MoviePlayer from '@/components/MoviePlayer';
 
 type Movie = Pick<Movies, 'url' | 'title' | 'startAt'>;
 

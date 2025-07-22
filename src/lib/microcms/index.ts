@@ -7,13 +7,13 @@ import type {
 } from 'microcms-js-sdk';
 import { createClient } from 'microcms-js-sdk';
 
-import { ENVIRONMENTS } from '../utils';
 import type {
   Endpoints,
   GetListQueries,
   GetListRequest,
   GetListResponse,
 } from './types';
+import { ENVIRONMENTS } from '../utils';
 
 const _queriesParser = <T>(queries: GetListQueries<T>): MicroCMSQueries => ({
   ...queries,

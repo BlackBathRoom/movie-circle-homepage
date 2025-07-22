@@ -1,5 +1,6 @@
-import { PAGES } from '@/constants';
 import Link from 'next/link';
+
+import { PAGES } from '@/constants';
 
 const Header = () => {
   return (
