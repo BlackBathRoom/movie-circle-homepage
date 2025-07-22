@@ -1,10 +1,10 @@
 'use client';
 
 import MoviePlayer from '@/components/MoviePlayer';
-import type { Movies as _Movies } from '@/lib/microcms/types';
+import type { Movies } from '@/lib/microcms/types';
 import { cn } from '@/lib/utils';
 
-type Movie = Pick<_Movies, 'url' | 'title' | 'startAt'>;
+type Movie = Pick<Movies, 'url' | 'title' | 'startAt'>;
 
 type Props = {
   movie: Movie;
