@@ -1,29 +1,25 @@
 'use client';
 
-import type { Movies } from '@/lib/microcms/types';
+import MoviePlayer from '@/components/MoviePlayer';
+import type { Movies as _Movies } from '@/lib/microcms/types';
 import { cn } from '@/lib/utils';
 
-type TakeMovies = Pick<Movies, 'url' | 'title' | 'startAt'>;
+type Movie = Pick<_Movies, 'url' | 'title' | 'startAt'>;
 
 type Props = {
-  movie: TakeMovies;
+  movie: Movie;
   className?: string;
 };
 
 const MovieWorks: React.FC<Props> = ({ movie, className }) => {
   return (
-    <div className={cn('py-6 px-4 flex flex-col items-center', className)}>
-      <div className="flex items-center justify-center">
-        <div className="w-full h-full max-w-4xl aspect-video bg-gray-100 shadow-md overflow-hidden">
-          <iframe
-            src={movie.url}
-            title={movie.title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            className="w-full h-full"
-          />
-        </div>
-      </div>
+    <div className={cn('aspect-video bg-gray-100 shadow-md', className)}>
+      <MoviePlayer
+        href={movie.url}
+        embedVideoTitle={movie.title}
+        startAt={movie.startAt}
+        className="w-full h-full"
+      />
     </div>
   );
 };

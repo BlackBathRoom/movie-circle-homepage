@@ -2,11 +2,15 @@ import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import MovieWorks from '@/components/MovieWorks';
 import { client } from '@/lib/microcms';
-import type { Movies } from '@/lib/microcms/types';
 import type { NextPage } from 'next';
 
 const Page: NextPage = async () => {
-  const movie = await client.get<Movies>({ endpoint: 'movies' });
+  const movie = await client
+    .getList({
+      endpoint: 'movies',
+      queries: { fields: ['url', 'title', 'startAt'] },
+    })
+    .then((res) => res.contents[0]);
 
   return (
     <div className="m-0 p-0">
