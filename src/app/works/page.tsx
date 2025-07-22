@@ -19,14 +19,14 @@ const Page: NextPage = async () => {
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-9 text-white text-center">
           ProductionMET
         </h1>
-        <section className="relative w-full h-screen overflow-hidden ">
+        <section className=" relative w-full h-screen overflow-hidden ">
           <MovieWorks
             movie={{
               url: movie.url,
               title: movie.title,
               startAt: movie.startAt,
             }}
-            className="bg-black rounded-lg shadow-xl"
+            className="bg-black rounded-lg shadow-xl  w-full h-full"
           />
         </section>
       </main>
