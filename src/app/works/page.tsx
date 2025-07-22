@@ -6,7 +6,7 @@ import type { Movies } from '@/lib/microcms/types';
 import type { NextPage } from 'next';
 
 const Page: NextPage = async () => {
-  const setMovie = await client.get<Movies>({ endpoint: 'movies' });
+  const movie = await client.get<Movies>({ endpoint: 'movies' });
 
   return (
     <div className="m-0 p-0">
@@ -18,9 +18,9 @@ const Page: NextPage = async () => {
         <section className="relative w-full h-screen overflow-hidden ">
           <MovieWorks
             movie={{
-              url: setMovie.url,
-              title: setMovie.title,
-              startAt: setMovie.startAt,
+              url: movie.url,
+              title: movie.title,
+              startAt: movie.startAt,
             }}
             className="bg-black rounded-lg shadow-xl"
           />

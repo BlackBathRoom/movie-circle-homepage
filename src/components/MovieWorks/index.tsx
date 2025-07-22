@@ -3,10 +3,10 @@
 import type { Movies } from '@/lib/microcms/types';
 import { cn } from '@/lib/utils';
 
-type FailMovies = Pick<Movies, 'url' | 'title' | 'startAt'>;
+type TakeMovies = Pick<Movies, 'url' | 'title' | 'startAt'>;
 
 type Props = {
-  movie: FailMovies;
+  movie: TakeMovies;
   className?: string;
 };
 
