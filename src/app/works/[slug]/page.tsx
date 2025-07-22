@@ -15,7 +15,7 @@ const Page: NextPage<Props> = async ({ params }) => {
   });
 
   return (
-    <div className="bg-gray-400 py-12 px-4">
+    <div className="bg-gray-600 py-12 px-4">
       <div className="min-h-screen px-3 py-2 flex flex-col items-center gap-5 ">
         <div className="relative w-full flex flex-col items-center  px-5">
           <MoviePlayer
