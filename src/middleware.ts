@@ -19,7 +19,7 @@ const timingSafeEqual = (a: string, b: string) => {
 
 export function middleware(request: NextRequest) {
   if (process.env.ENABLE_BASIC_AUTH !== 'true') {
-    console.log('Basic authentication is disabled. Skipping middleware.');
+    console.warn('Basic authentication is disabled. Skipping middleware.');
     return NextResponse.next();
   }
 
@@ -39,7 +39,7 @@ export function middleware(request: NextRequest) {
   const basicAuth = request.headers.get('authorization');
 
   if (!basicAuth) {
-    console.log('🔥 No authorization header found');
+    console.error('🔥 No authorization header found');
     return NextResponse.json(
       { error: 'Please enter credentials' },
       {
