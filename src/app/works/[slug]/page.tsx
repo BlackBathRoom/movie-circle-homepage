@@ -1,6 +1,7 @@
-import MoviePlayer from '@/components/MoviePlayer';
-import { client } from '@/lib/microcms';
 import type { NextPage } from 'next';
+
+import { client } from '@/lib/microcms';
+import MoviePlayer from '@/components/MoviePlayer';
 
 type Props = {
   params: { slug: string };

@@ -1,6 +1,7 @@
+import type { Metadata } from 'next';
+
 import Footer from '@/components/Footer';
 import '@/styles/globals.css';
-import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '映画サークル',

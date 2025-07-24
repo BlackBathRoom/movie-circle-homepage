@@ -1,6 +1,7 @@
-import { PAGES } from '@/constants';
 import Link from 'next/link';
 import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai';
+
+import { PAGES } from '@/constants';
 
 const Footer = () => {
   return (
