@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 
 import { client } from '@/lib/microcms';
-import Header from '@/components/ui/Header';
 import Slider from '@/components/ui/Slider';
 
 const Page: NextPage = async () => {
@@ -20,7 +19,6 @@ const Page: NextPage = async () => {
 
   return (
     <div className="m-0 p-0">
-      <Header />
       <div className="bg-gray-100">
         <Slider
           images={images.contents.map((data) => ({
@@ -31,7 +29,6 @@ const Page: NextPage = async () => {
           }))}
         />
       </div>
-
       <div className="bg-white shadow-md px-4">
         <h1 className="text-3xl font-bold mb-4">MEMBER</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
