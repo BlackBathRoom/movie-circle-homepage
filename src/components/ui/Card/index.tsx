@@ -9,7 +9,7 @@ const Card: React.FC<Props> = ({ children, className }) => {
   return (
     <div
       className={cn(
-        'rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300',
+        'rounded-lg shadow-md transition-shadow duration-300 hover:shadow-lg',
         className,
       )}
     >

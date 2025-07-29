@@ -11,15 +11,15 @@ const Page: NextPage = async () => {
 
   return (
     <div className="flex flex-col items-center py-5">
-      <h1 className="text-3xl font-bold mb-5">Goods</h1>
-      <div className="flex flex-wrap justify-center gap-6 max-w-6xl">
+      <h1 className="mb-5 text-3xl font-bold">Goods</h1>
+      <div className="flex max-w-6xl flex-wrap justify-center gap-6">
         {goods.contents.map((item) => (
-          <Card key={item.id} className="w-52 h-80 flex-shrink-0 bg-slate-100">
+          <Card key={item.id} className="h-80 w-52 flex-shrink-0 bg-slate-100">
             <a
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center w-full h-full"
+              className="flex h-full w-full flex-col items-center"
             >
               {item.image ? (
                 <Image
@@ -30,13 +30,13 @@ const Page: NextPage = async () => {
                   className="h-2/3 rounded-lg object-cover"
                 />
               ) : (
-                <div className="h-2/3 bg-gray-200 flex items-center justify-center mb-4">
+                <div className="mb-4 flex h-2/3 items-center justify-center bg-gray-200">
                   <span className="text-gray-500">No Image</span>
                 </div>
               )}
-              <div className="flex flex-col h-1/3 justify-center">
+              <div className="flex h-1/3 flex-col justify-center">
                 <h2 className="text-xl font-semibold">{item.name}</h2>
-                <p className="text-gray-600 pt-2">{item.description}</p>
+                <p className="pt-2 text-gray-600">{item.description}</p>
               </div>
             </a>
           </Card>

@@ -5,7 +5,7 @@ import { PAGES, SNS_LINKS } from '@/constants';
 
 const Footer = () => {
   return (
-    <footer className="bg-zinc-700 text-white flex flex-col items-center py-4 min-h-60 text-2xl px-5">
+    <footer className="flex min-h-60 flex-col items-center bg-zinc-700 px-5 py-4 text-2xl text-white">
       <div className="flex w-full justify-between">
         <div className="flex flex-col gap-2">
           <span className="text-3xl">ProductionMET</span>
@@ -14,17 +14,17 @@ const Footer = () => {
               href={SNS_LINKS.youtube}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-zinc-500 transition-colors"
+              className="text-gray-300 transition-colors hover:text-zinc-500"
             >
-              <AiOutlineYoutube className="w-10 h-auto" />
+              <AiOutlineYoutube className="h-auto w-10" />
             </a>
             <a
               href={SNS_LINKS.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-zinc-500 transition-colors"
+              className="text-gray-300 transition-colors hover:text-zinc-500"
             >
-              <AiOutlineInstagram className="w-10 h-auto" />
+              <AiOutlineInstagram className="h-auto w-10" />
             </a>
           </div>
         </div>
@@ -33,7 +33,7 @@ const Footer = () => {
             <Link
               key={page.text}
               href={page.href}
-              className="text-gray-300 hover:text-zinc-500 transition-colors"
+              className="text-gray-300 transition-colors hover:text-zinc-500"
             >
               {page.text}
             </Link>

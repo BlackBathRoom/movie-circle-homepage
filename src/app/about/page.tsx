@@ -29,11 +29,11 @@ const Page: NextPage = async () => {
           }))}
         />
       </div>
-      <div className="bg-white shadow-md px-4">
-        <h1 className="text-3xl font-bold mb-4">MEMBER</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+      <div className="bg-white px-4 shadow-md">
+        <h1 className="mb-4 text-3xl font-bold">MEMBER</h1>
+        <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3">
           {members.contents.map((member) => (
-            <div key={member.name} className="bg-gray-50 p-4 rounded-lg shadow">
+            <div key={member.name} className="rounded-lg bg-gray-50 p-4 shadow">
               <h2 className="text-xl font-semibold">{member.name}</h2>
               <p className="text-gray-600">{member.role}</p>
               <p className="text-gray-600">{member.description}</p>
@@ -41,14 +41,14 @@ const Page: NextPage = async () => {
           ))}
         </div>
       </div>
-      <div className="bg-white shadow-md px-4">
-        <h1 className="text-3xl font-bold mb-4">BIOGRAPHY</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+      <div className="bg-white px-4 shadow-md">
+        <h1 className="mb-4 text-3xl font-bold">BIOGRAPHY</h1>
+        <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3">
           {biographies.contents.map((bio) => (
-            <div key={bio.title} className="bg-gray-50 p-4 rounded-lg shadow">
+            <div key={bio.title} className="rounded-lg bg-gray-50 p-4 shadow">
               <h2 className="text-xl font-semibold">{bio.title}</h2>
               <p className="text-gray-600">{bio.description}</p>
-              <p className="text-gray-500 mt-2">{bio.dateAt}</p>
+              <p className="mt-2 text-gray-500">{bio.dateAt}</p>
             </div>
           ))}
         </div>
