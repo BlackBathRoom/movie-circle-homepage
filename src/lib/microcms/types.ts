@@ -36,6 +36,7 @@ type Biographies = {
 type Goods = {
   name: string;
   description: string;
+  url: string;
   image?: MicroCMSImage;
 } & MicroCMSListContent;
 
