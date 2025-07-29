@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai';
 
-import { PAGES } from '@/constants';
+import { PAGES, SNS_LINKS } from '@/constants';
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
           <span className="text-3xl">ProductionMET</span>
           <div className="flex gap-5">
             <a
-              href="https://www.youtube.com/channel/UC3fr_4zBwmlve2ZqiLzTO2Q"
+              href={SNS_LINKS.youtube}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-zinc-500 transition-colors"
@@ -19,7 +19,7 @@ const Footer = () => {
               <AiOutlineYoutube className="w-10 h-auto" />
             </a>
             <a
-              href="https://www.instagram.com/film_circle/"
+              href={SNS_LINKS.instagram}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-zinc-500 transition-colors"
