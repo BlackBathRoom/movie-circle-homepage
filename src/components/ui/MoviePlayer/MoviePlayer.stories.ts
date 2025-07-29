@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import MoviePlayer from './index';
 
 const meta: Meta<typeof MoviePlayer> = {
-  title: 'Components/MoviePlayer',
+  title: 'Components/ui/MoviePlayer',
   component: MoviePlayer,
   parameters: {
     layout: 'fullscreen',

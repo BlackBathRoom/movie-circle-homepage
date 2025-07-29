@@ -30,5 +30,5 @@
     ".vscode-insiders"
   ],
   "extensions.ignoreRecommendations": false,
-  "cSpell.words": ["MICROCMS", "modestbranding"]
+  "cSpell.words": ["daisyui", "MICROCMS", "modestbranding"]
 }

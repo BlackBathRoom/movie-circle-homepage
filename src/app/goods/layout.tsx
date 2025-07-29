@@ -4,8 +4,8 @@ type Props = {
   children: React.ReactNode;
 };
 
-const WorksLayout: React.FC<Props> = ({ children }) => {
+const GoodsLayout: React.FC<Props> = ({ children }) => {
   return <PageFrame>{children}</PageFrame>;
 };
 
-export default WorksLayout;
+export default GoodsLayout;

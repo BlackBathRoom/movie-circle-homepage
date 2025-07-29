@@ -19,4 +19,9 @@ export const PAGES = [
     text: 'Contact',
     href: '/contact',
   },
-];
+] as const;
+
+export const SNS_LINKS = {
+  instagram: 'https://www.instagram.com/film_circle/',
+  youtube: 'https://www.youtube.com/channel/UC3fr_4zBwmlve2ZqiLzTO2Q',
+} as const;

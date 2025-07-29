@@ -1,5 +1,5 @@
 gen-story:
-	@bash scripts/gen-story.sh $(name)
+	@bash scripts/gen-story.sh $(name) $(ext)
 
 gen-component:
-	@bash scripts/gen-component.sh $(name)
+	@bash scripts/gen-component.sh $(type) $(name)

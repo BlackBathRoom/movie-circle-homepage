@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 
 import { client } from '@/lib/microcms';
-import MoviePlayer from '@/components/MoviePlayer';
+import MoviePlayer from '@/components/ui/MoviePlayer';
 
 type Props = {
   params: { slug: string };
@@ -16,21 +16,21 @@ const Page: NextPage<Props> = async ({ params }) => {
   });
 
   return (
-    <div className="bg-gray-600 py-12 px-4">
-      <div className="min-h-screen px-3 py-2 flex flex-col items-center gap-5 ">
-        <div className="relative w-full flex flex-col items-center  px-5">
+    <div className="bg-gray-600 px-4 py-12">
+      <div className="flex min-h-screen flex-col items-center gap-5 px-3 py-2">
+        <div className="relative flex w-full flex-col items-center px-5">
           <MoviePlayer
             href={movie.url}
             embedVideoTitle={movie.title}
             startAt={movie.startAt}
-            className=" w-3/5 max-w-[900px] aspect-video"
+            className="aspect-video w-3/5 max-w-[900px]"
           />
         </div>
-        <div className="w-3/5 max-w-[900px] bg-gray-100 shadow-md gap-4 p-6 flex flex-col ">
-          <span className="block text-3xl font-bold text-gray-800 mb-4 mt-4 px-4">
+        <div className="flex w-3/5 max-w-[900px] flex-col gap-4 bg-gray-100 p-6 shadow-md">
+          <span className="mt-4 mb-4 block px-4 text-3xl font-bold text-gray-800">
             {movie.title}
           </span>
-          <span className="block p-6 text-lg text-gray-700 mb-4 mt-4 px-4">
+          <span className="mt-4 mb-4 block p-6 px-4 text-lg text-gray-700">
             {movie.description}
           </span>
         </div>

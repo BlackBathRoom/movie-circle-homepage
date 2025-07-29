@@ -1,39 +1,32 @@
 import type { NextPage } from 'next';
 import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai';
 
-import Header from '@/components/Header';
+import Card from '@/components/ui/Card';
+import { SNS_LINKS } from '@/constants';
 
-const Page: NextPage = async () => {
+const Page: NextPage = () => {
   return (
-    <div className="m-0 p-0 bg-gray-600">
-      <Header />
-      <div className="flex items-center justify-center min-h-screen　px-4 py-44">
-        <div className="flex flex-col gap-6 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-          <div className="flex items-center gap-4 sm:gap-5　">
-            <a
-              href="https://www.youtube.com/channel/UC3fr_4zBwmlve2ZqiLzTO2Q"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-zinc-500 transition-colors break-all"
-            >
-              <AiOutlineYoutube className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white hover:text-zinc-500 transition-colors" />
-              https://www.youtube.com/channel/UC3fr_4zBwmlve2ZqiLzTO2Q
-            </a>
-          </div>
-          <div className="border-t border-white/30 w-full" />
-          <div className="flex items-center gap-4 sm:gap-5　">
-            <a
-              href="https://www.instagram.com/film_circle/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-zinc-500 transition-colors break-all"
-            >
-              <AiOutlineInstagram className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white hover:text-zinc-500 transition-colors" />
-              https://www.instagram.com/film_circle/
-            </a>
-          </div>
-        </div>
-      </div>
+    <div className="flex min-h-full flex-col items-center gap-6 p-5 md:flex-row md:justify-center md:gap-10">
+      <Card className="flex max-w-xs md:max-w-sm">
+        <a
+          href={SNS_LINKS.youtube}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex w-full flex-col items-center"
+        >
+          <AiOutlineYoutube className="h-60 w-60 text-zinc-700 transition-colors hover:text-zinc-500 md:h-80 md:w-80" />
+        </a>
+      </Card>
+      <Card className="flex max-w-xs">
+        <a
+          href={SNS_LINKS.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex w-full flex-col items-center"
+        >
+          <AiOutlineInstagram className="h-60 w-60 text-zinc-700 transition-colors hover:text-zinc-500 md:h-80 md:w-80" />
+        </a>
+      </Card>
     </div>
   );
 };
