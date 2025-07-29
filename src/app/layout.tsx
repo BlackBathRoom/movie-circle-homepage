@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 
-import Footer from '@/components/ui/Footer';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
@@ -15,10 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="h-full w-full overflow-x-hidden">
-        {children}
-        <Footer />
-      </body>
+      <body className="h-full w-full overflow-x-hidden">{children}</body>
     </html>
   );
 }

@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 
 import { client } from '@/lib/microcms';
-import Header from '@/components/ui/Header';
+import PageFrame from '@/components/layout/PageFrame';
 import MoviePlayer from '@/components/ui/MoviePlayer';
 import Slider from '@/components/ui/Slider';
 
@@ -26,17 +26,18 @@ const Page: NextPage = async () => {
           className="absolute top-0 left-0 h-full w-full object-cover"
         />
       </section>
-      <Header />
-      <div className="bg-gray-100">
-        <Slider
-          images={images.contents.map((data) => ({
-            src: data.image.url,
-            alt: data.title,
-            width: data.image.width,
-            height: data.image.height,
-          }))}
-        />
-      </div>
+      <PageFrame>
+        <div className="bg-gray-100">
+          <Slider
+            images={images.contents.map((data) => ({
+              src: data.image.url,
+              alt: data.title,
+              width: data.image.width,
+              height: data.image.height,
+            }))}
+          />
+        </div>
+      </PageFrame>
     </div>
   );
 };
