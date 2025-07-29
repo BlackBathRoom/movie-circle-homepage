@@ -4,7 +4,7 @@ import { client } from '@/lib/microcms';
 import MoviePlayer from '@/components/ui/MoviePlayer';
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 const Page: NextPage<Props> = async ({ params }) => {
