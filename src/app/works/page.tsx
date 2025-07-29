@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 
 import { client } from '@/lib/microcms';
-import Slider from '@/components/Slider';
+import Slider from '@/components/ui/Slider';
 
 const Page: NextPage = async () => {
   const movieThumbnails = await client

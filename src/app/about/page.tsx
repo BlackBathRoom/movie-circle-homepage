@@ -1,8 +1,8 @@
 import type { NextPage } from 'next';
 
 import { client } from '@/lib/microcms';
-import Header from '@/components/Header';
-import Slider from '@/components/Slider';
+import Header from '@/components/ui/Header';
+import Slider from '@/components/ui/Slider';
 
 const Page: NextPage = async () => {
   const images = await client.getList({

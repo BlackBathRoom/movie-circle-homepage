@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai';
 
-import Header from '@/components/Header';
+import Header from '@/components/ui/Header';
 
 const Page: NextPage = async () => {
   return (

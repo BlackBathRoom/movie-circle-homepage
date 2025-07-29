@@ -1,9 +1,9 @@
 import type { NextPage } from 'next';
 
 import { client } from '@/lib/microcms';
-import Header from '@/components/Header';
-import MoviePlayer from '@/components/MoviePlayer';
-import Slider from '@/components/Slider';
+import Header from '@/components/ui/Header';
+import MoviePlayer from '@/components/ui/MoviePlayer';
+import Slider from '@/components/ui/Slider';
 
 const Page: NextPage = async () => {
   const video = await client.getList({
