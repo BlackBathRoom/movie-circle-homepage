@@ -15,4 +15,8 @@ export const PAGES = [
     text: 'Goods',
     href: '/goods',
   },
+  {
+    text: 'Contact',
+    href: '/contact',
+  },
 ];
