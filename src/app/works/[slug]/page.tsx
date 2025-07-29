@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import type { NextPage } from 'next';
 
 import { client } from '@/lib/microcms';
