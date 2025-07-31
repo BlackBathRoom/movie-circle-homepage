@@ -20,8 +20,8 @@ const Page: NextPage = async () => {
     );
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-600 px-4 py-12">
-      <h1 className="mb-9 text-center text-4xl font-bold text-white sm:text-5xl md:text-6xl lg:text-8xl">
+    <main className="flex min-h-screen flex-col items-center justify-center px-4 py-12">
+      <h1 className="mb-9 text-center text-4xl font-bold text-zinc-700 sm:text-5xl md:text-6xl lg:text-8xl">
         ProductionMET
       </h1>
       <section className="relative h-screen w-full overflow-hidden">

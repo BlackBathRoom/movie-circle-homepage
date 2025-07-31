@@ -13,7 +13,7 @@ type Props = {
 
 const Slider: React.FC<Props> = ({ images }) => {
   return (
-    <div className="overflow-x-scroll px-4 py-6">
+    <div className="overflow-x-scroll bg-zinc-300 px-4 py-6">
       <ul className="inline-flex w-full min-w-fit justify-center space-x-4">
         {images.map((image, index) => (
           <li key={index} className="flex-shrink-0">
