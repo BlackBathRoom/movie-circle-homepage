@@ -9,7 +9,7 @@ type Props = {
 
 const PageFrame: React.FC<Props> = ({ children, className }) => {
   return (
-    <div className="m-0 flex h-full min-h-screen w-full flex-col p-0">
+    <div className="m-0 flex h-full min-h-screen w-full flex-col">
       <div className="sticky top-0 z-50">
         <Header />
       </div>

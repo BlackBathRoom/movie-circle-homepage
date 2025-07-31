@@ -1,6 +1,8 @@
 import type { NextPage } from 'next';
 
 import { client } from '@/lib/microcms';
+import Card from '@/components/ui/Card';
+import PageTitle from '@/components/ui/PageTitle';
 import Slider from '@/components/ui/Slider';
 
 const Page: NextPage = async () => {
@@ -19,7 +21,7 @@ const Page: NextPage = async () => {
 
   return (
     <div className="m-0 p-0">
-      <div className="bg-gray-100">
+      <div className="">
         <Slider
           images={images.contents.map((data) => ({
             src: data.image.url,
@@ -29,27 +31,33 @@ const Page: NextPage = async () => {
           }))}
         />
       </div>
-      <div className="bg-white px-4 shadow-md">
-        <h1 className="mb-4 text-3xl font-bold">MEMBER</h1>
+      <div className="px-4">
+        <PageTitle>MEMBER</PageTitle>
         <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3">
           {members.contents.map((member) => (
-            <div key={member.name} className="rounded-lg bg-gray-50 p-4 shadow">
+            <Card
+              key={member.name}
+              className="rounded-lg bg-zinc-50 p-4 text-zinc-700 shadow"
+            >
               <h2 className="text-xl font-semibold">{member.name}</h2>
-              <p className="text-gray-600">{member.role}</p>
-              <p className="text-gray-600">{member.description}</p>
-            </div>
+              <p className="">{member.role}</p>
+              <p className="">{member.description}</p>
+            </Card>
           ))}
         </div>
       </div>
-      <div className="bg-white px-4 shadow-md">
-        <h1 className="mb-4 text-3xl font-bold">BIOGRAPHY</h1>
+      <div className="px-4">
+        <PageTitle>BIOGRAPHY</PageTitle>
         <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3">
           {biographies.contents.map((bio) => (
-            <div key={bio.title} className="rounded-lg bg-gray-50 p-4 shadow">
+            <Card
+              key={bio.title}
+              className="rounded-lg bg-zinc-50 p-4 text-zinc-700 shadow"
+            >
               <h2 className="text-xl font-semibold">{bio.title}</h2>
-              <p className="text-gray-600">{bio.description}</p>
-              <p className="mt-2 text-gray-500">{bio.dateAt}</p>
-            </div>
+              <p className="">{bio.description}</p>
+              <p className="">{bio.dateAt}</p>
+            </Card>
           ))}
         </div>
       </div>
