@@ -14,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="h-full w-full overflow-x-hidden">{children}</body>
+      <body className="h-full w-full overflow-x-hidden bg-zinc-300 p-0">
+        {children}
+      </body>
     </html>
   );
 }

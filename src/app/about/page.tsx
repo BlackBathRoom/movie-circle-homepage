@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 
 import { client } from '@/lib/microcms';
+import Card from '@/components/ui/Card';
 import Slider from '@/components/ui/Slider';
 
 const Page: NextPage = async () => {
@@ -35,14 +36,14 @@ const Page: NextPage = async () => {
         </h1>
         <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3">
           {members.contents.map((member) => (
-            <div
+            <Card
               key={member.name}
               className="rounded-lg bg-zinc-50 p-4 text-zinc-700 shadow"
             >
               <h2 className="text-xl font-semibold">{member.name}</h2>
               <p className="">{member.role}</p>
               <p className="">{member.description}</p>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
@@ -52,14 +53,14 @@ const Page: NextPage = async () => {
         </h1>
         <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3">
           {biographies.contents.map((bio) => (
-            <div
+            <Card
               key={bio.title}
               className="rounded-lg bg-zinc-50 p-4 text-zinc-700 shadow"
             >
               <h2 className="text-xl font-semibold">{bio.title}</h2>
               <p className="">{bio.description}</p>
               <p className="">{bio.dateAt}</p>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
