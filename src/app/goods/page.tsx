@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 import { client } from '@/lib/microcms';
 import Card from '@/components/ui/Card';
+import PageTitle from '@/components/ui/PageTitle';
 
 const Page: NextPage = async () => {
   const goods = await client.getList({
@@ -11,7 +12,7 @@ const Page: NextPage = async () => {
 
   return (
     <div className="flex flex-col items-center py-5">
-      <h1 className="mb-5 text-3xl font-bold text-zinc-700">Goods</h1>
+      <PageTitle>Goods</PageTitle>
       <div className="flex max-w-6xl flex-wrap justify-center gap-6">
         {goods.contents.map((item) => (
           <Card

@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 
 import { client } from '@/lib/microcms';
 import Card from '@/components/ui/Card';
+import PageTitle from '@/components/ui/PageTitle';
 import Slider from '@/components/ui/Slider';
 
 const Page: NextPage = async () => {
@@ -31,9 +32,7 @@ const Page: NextPage = async () => {
         />
       </div>
       <div className="px-4">
-        <h1 className="mb-4 text-center text-3xl font-bold text-zinc-700">
-          MEMBER
-        </h1>
+        <PageTitle>MEMBER</PageTitle>
         <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3">
           {members.contents.map((member) => (
             <Card
@@ -48,9 +47,7 @@ const Page: NextPage = async () => {
         </div>
       </div>
       <div className="px-4">
-        <h1 className="mb-4 text-center text-3xl font-bold text-zinc-700">
-          BIOGRAPHY
-        </h1>
+        <PageTitle>BIOGRAPHY</PageTitle>
         <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3">
           {biographies.contents.map((bio) => (
             <Card

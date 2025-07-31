@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 
 import { client } from '@/lib/microcms';
+import PageTitle from '@/components/ui/PageTitle';
 import Slider from '@/components/ui/Slider';
 
 const Page: NextPage = async () => {
@@ -21,9 +22,9 @@ const Page: NextPage = async () => {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center px-4 py-12">
-      <h1 className="mb-9 text-center text-4xl font-bold text-zinc-700 sm:text-5xl md:text-6xl lg:text-8xl">
+      <PageTitle className="mb-5 text-4xl sm:text-5xl md:text-6xl lg:text-8xl">
         ProductionMET
-      </h1>
+      </PageTitle>
       <section className="relative h-screen w-full overflow-hidden">
         <Slider
           images={movieThumbnails.map((thumbnail) => ({
