@@ -45,7 +45,7 @@
     "eslint-plugin-storybook": "^9.0.11",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.4",
-    "playwright": "^1.53.1",
+    "playwright": "^1.54.2",
     "prettier": "^3.5.3",
     "prettier-plugin-organize-imports": "^4.2.0",
     "prettier-plugin-tailwindcss": "^0.6.14",
