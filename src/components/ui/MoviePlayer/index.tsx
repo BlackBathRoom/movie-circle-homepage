@@ -5,6 +5,7 @@ type Props = {
   embedVideoTitle?: string;
   startAt?: number;
   className?: string;
+  style?: React.CSSProperties;
 };
 
 const MoviePlayer: React.FC<Props> = ({
@@ -12,6 +13,7 @@ const MoviePlayer: React.FC<Props> = ({
   embedVideoTitle = null,
   startAt = null,
   className = '',
+  style = {},
 }) => {
   const params = (<K extends string, V>(params: { [key in K]: V }): string =>
     Object.entries(params)
@@ -31,6 +33,7 @@ const MoviePlayer: React.FC<Props> = ({
       referrerPolicy="strict-origin-when-cross-origin"
       allowFullScreen
       title={embedVideoTitle || undefined}
+      style={style}
     />
   );
 };

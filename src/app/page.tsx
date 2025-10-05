@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 
 import { client } from '@/lib/microcms';
 import PageFrame from '@/components/layout/PageFrame';
-import MoviePlayer from '@/components/ui/MoviePlayer';
+import MovieSection from '@/components/ui/MovieSection';
 import Slider from '@/components/ui/Slider';
 
 const Page: NextPage = async () => {
@@ -17,15 +17,13 @@ const Page: NextPage = async () => {
 
   return (
     <div className="m-0 p-0">
-      {/* 動画セクション */}
-      <section className="relative h-screen w-full overflow-hidden">
-        <MoviePlayer
-          href={video.contents[0].url}
-          embedVideoTitle={video.contents[0].title}
-          startAt={video.contents[0].startAt}
-          className="absolute top-0 left-0 h-full w-full object-cover"
-        />
-      </section>
+      <MovieSection
+        video={{
+          url: video.contents[0]?.url || '',
+          title: video.contents[0]?.title || '',
+          startAt: video.contents[0]?.startAt || 0,
+        }}
+      />
       <PageFrame>
         <div className="bg-gray-100">
           <Slider
